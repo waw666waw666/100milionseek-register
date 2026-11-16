@@ -10,31 +10,31 @@
 
 ---
 
-##  框架母港与生态互链 (Ecosystem Backlink)
+## 框架母港与生态互链 (Ecosystem Backlink)
 
->  **项目背景与互相引流说明**：  
+> **项目背景与互相引流说明**：  
 > 本独立工程由 **[AutoRegister Community](https://github.com/waw666waw666/register-community)** 开源注册自动化主框架一键解耦派生。  
 > 
-> 如果你需要探索**更多站点的自动化支持**（如 Deepgram、100MilionSeek、AMD、Coarena、QuanticData 等）、**三通道公网临时邮箱轮换**、**账号资产全生命周期审计**、或通过**脚手架一键生成新站点适配器**，欢迎前往并 Star 我们的主框架仓库：  
+> 如果你需要探索**更多站点的自动化支持**（如 Deepgram、100MilionSeek、AMD、Coarena 等）、**三通道公网临时邮箱轮换**、**账号资产全生命周期审计**、或通过**脚手架一键生成新站点适配器**，欢迎前往并 Star 我们的主框架仓库：  
 > 
->  **主框架项目传送门**：**[https://github.com/waw666waw666/register-community](https://github.com/waw666waw666/register-community)**
+> **主框架项目传送门**：**[https://github.com/waw666waw666/register-community](https://github.com/waw666waw666/register-community)**
 
 ---
 
-##  项目简介
+## 项目简介
 
 专为 100milionseek (https://100milionseek.top) 打造的一键领 Key 工具。免收激活邮件，过完 Cloudflare Turnstile 验证码后页面秒级直出 OpenAI 兼容 API Key，并内置母号裂变接力管理机制。
 
-###  核心优势与技术特征
+### 核心优势与技术特征
 
--  **每天免费送 1 亿 Tokens**：新号直接享受 100M tokens/day 的 DeepSeek V4.1 免费算力
--  **零邮箱验证门槛**：输入任意合规格式邮箱即可，完全无需接收验证码或激活信
-- ️ **Turnstile 3.5s 保护窗口**：针对 Cloudflare 算力挑战注入防打断保护窗，极大提升自主通过率
--  **母号裂变接力池**：内置跨进程文件锁，每满 10 个 AFF 自动轮换至下一母号，吃满翻倍上限
+- **每天免费送 1 亿 Tokens**：新号直接享受 100M tokens/day 的 DeepSeek V4.1 免费算力
+- **零邮箱验证门槛**：输入任意合规格式邮箱即可，完全无需接收验证码或激活信
+- **Turnstile 3.5s 保护窗口**：针对 Cloudflare 算力挑战注入防打断保护窗，极大提升自主通过率
+- **母号裂变接力池**：内置跨进程文件锁，每满 10 个 AFF 自动轮换至下一母号，吃满翻倍上限
 
 ---
 
-##  极速上手
+## 极速上手
 
 ### 1. 环境准备与依赖安装
 
@@ -91,20 +91,20 @@ python main.py --headless -n 1
 
 ---
 
-## ️ 体系化生态矩阵
+## 体系化生态矩阵
 
 本工程为 AutoRegister 家族核心实战矩阵之一：
 
 | 独立开源项目 | 核心特色与福利 | 源码直达 |
 | :--- | :--- | :--- |
-| **AutoRegister Community** |  通用自动化注册母港与脚手架引擎 | [GitHub](https://github.com/waw666waw666/register-community) |
-| **Deepgram AutoRegister** |  官方 $200 免费额度 + 谷歌人机穿透 + 纯协议提 Key | [GitHub](https://github.com/waw666waw666/deepgram-register) |
-| **100MilionSeek AutoRegister** |  每天免费 1 亿 Token 算力 + 免收信秒出 Key + 母号裂变 | [GitHub](https://github.com/waw666waw666/100milionseek-register) |
-| **AMD AI Dev AutoRegister** |  AMD 官方大厂计划 + Akamai 遥测 + OneTrust 穿透 | [GitHub](https://github.com/waw666waw666/amd-register) |
-| **Coarena AutoRegister** |  谷歌登录后 100% 协议提 Key 与每日额度审计 | [GitHub](https://github.com/waw666waw666/coarena-register) |
+| **AutoRegister Community** | 通用自动化注册母港与脚手架引擎 | [GitHub](https://github.com/waw666waw666/register-community) |
+| **Deepgram AutoRegister** | 官方 $200 免费额度 + 谷歌人机穿透 + 纯协议提 Key | [GitHub](https://github.com/waw666waw666/deepgram-register) |
+| **100MilionSeek AutoRegister** | 每天免费 1 亿 Token 算力 + 免收信秒出 Key + 母号裂变 | [GitHub](https://github.com/waw666waw666/100milionseek-register) |
+| **AMD AI Dev AutoRegister** | AMD 官方大厂计划 + Akamai 遥测 + OneTrust 穿透 | [GitHub](https://github.com/waw666waw666/amd-register) |
+| **Coarena AutoRegister** | 谷歌登录后 100% 协议提 Key 与每日额度审计 | [GitHub](https://github.com/waw666waw666/coarena-register) |
 
 ---
 
-## ️ 免责声明 (Disclaimer)
+## 免责声明 (Disclaimer)
 
 本项目仅供软件工程自动化、浏览器驾驶协议与网络可用性技术交流与合法测试使用。使用者必须严格遵守目标平台服务条款与当地法律法规，严禁将本项目用于未经授权的大规模滥用或非法用途。作者不对任何因使用本项目造成的损失承担法律责任。详见 [DISCLAIMER.zh.md](DISCLAIMER.zh.md)。

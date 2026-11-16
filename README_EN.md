@@ -10,31 +10,31 @@
 
 ---
 
-##  Ecosystem & Backlink Notice
+## Ecosystem & Backlink Notice
 
->  **Framework Origin**:  
+> **Framework Origin**:  
 > This standalone tool is derived directly from **[AutoRegister Community](https://github.com/waw666waw666/register-community)**, a general-purpose automated account registration and credential management framework.  
 > 
 > If you need multi-site orchestration, tri-channel disposable mailbox rotators, lifecycle credential verification, or automated adapter code generation scaffolds, check out our primary repository:  
 > 
->  **Main Framework Repository**: **[https://github.com/waw666waw666/register-community](https://github.com/waw666waw666/register-community)**
+> **Main Framework Repository**: **[https://github.com/waw666waw666/register-community](https://github.com/waw666waw666/register-community)**
 
 ---
 
-##  Overview
+## Overview
 
 An automated key minting tool built for 100milionseek (https://100milionseek.top). Bypasses email verification completely, resolves Cloudflare Turnstile, extracts OpenAI-compatible API keys in seconds, and manages cascading referral pools.
 
-###  Key Highlights
+### Key Highlights
 
--  **100M Tokens/day Free Allowance**: Instant access to DeepSeek V4.1 free compute quota
--  **Zero Email Verification**: Accepts any standard email address without requiring code verification
-- ️ **Turnstile 3.5s Protection Window**: Prevents PoW interruption during Cloudflare challenges
--  **Referral Pool Management**: Atomic file locking and automatic referral rotation to maximize allowances
+- **100M Tokens/day Free Allowance**: Instant access to DeepSeek V4.1 free compute quota
+- **Zero Email Verification**: Accepts any standard email address without requiring code verification
+- **Turnstile 3.5s Protection Window**: Prevents PoW interruption during Cloudflare challenges
+- **Referral Pool Management**: Atomic file locking and automatic referral rotation to maximize allowances
 
 ---
 
-##  Quickstart
+## Quickstart
 
 ### 1. Prerequisites and Installation
 
@@ -91,7 +91,7 @@ email----password----api_key----timestamp
 
 ---
 
-## ️ Ecosystem Portfolio
+## Ecosystem Portfolio
 
 Part of the AutoRegister open-source automation family:
 
@@ -105,6 +105,6 @@ Part of the AutoRegister open-source automation family:
 
 ---
 
-## ️ Legal Disclaimer
+## Legal Disclaimer
 
 This project is intended strictly for authorized educational research, browser automation benchmarking, and legitimate quality assurance. Users must strictly adhere to the target platform's Terms of Service and all applicable regional laws. See [DISCLAIMER.md](DISCLAIMER.md).
