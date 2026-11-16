@@ -1,8 +1,8 @@
 @echo off
 chcp 65001 >nul
-title 100MilionSeek RegisterHub
+title 100MilionSeek Register
 echo ========================================================
-echo   100MilionSeek RegisterHub
+echo   100MilionSeek Register
 echo   100milionseek 每日一亿 Token 免费算力一键自动领 Key 工具
 echo ========================================================
 echo.
