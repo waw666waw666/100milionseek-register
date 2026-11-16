@@ -52,12 +52,13 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-### 2. 运行配置 (可选)
+### 2. 运行配置与核心实操说明
 
-项目根目录提供开箱即用的 `config.example.json`。如需挂载本地代理或修改超时，直接复制为 `config.json` 即可：
+项目根目录提供开箱即用的 `config.example.json`。可复制为 `config.json` 进行配置：
 
 ```json
 {
+  "email": null,
   "browser": {
     "headless": false,
     "slow_mo": 50,
@@ -68,6 +69,17 @@ playwright install chromium
   "output_dir": "./results"
 }
 ```
+
+### 核心必读：免邮箱验证与 Turnstile 人机协同 (Zero-Email Guide)
+
+1. **零邮箱收信门槛（完全无需验证码）**：
+   - 100MilionSeek 物理层面**不发送任何激活邮件或验证码**！
+   - 脚本默认自动生成合规格式邮箱；若你想固定使用自己的邮箱，也可在 `config.json` 中配置 `"email": "your_name@outlook.com"`。
+2. **Cloudflare Turnstile 算力验证**：
+   - 启动有头窗口（双击 `run.bat` 选 1）；
+   - 脚本会自动填入邮箱并预留 3.5 秒算力计算窗口；
+   - 若屏幕上弹出 Cloudflare “请确认您是人类” 复选框，在真实窗口中轻点一下；
+   - 验证通过后，前端卡片 `#done` 10 秒内直接渲染出明文 API Key，脚本毫秒级提纯并存入 `results/accounts.txt` 与 `results/keys.txt`！
 
 ### 3. 一键启动下号
 
