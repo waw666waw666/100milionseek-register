@@ -52,12 +52,13 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-### 2. Configuration (Optional)
+### 2. Configuration & Crucial Guidance
 
 Copy `config.example.json` to `config.json` to configure proxies or headless mode:
 
 ```json
 {
+  "email": null,
   "browser": {
     "headless": false,
     "slow_mo": 50,
@@ -68,6 +69,16 @@ Copy `config.example.json` to `config.json` to configure proxies or headless mod
   "output_dir": "./results"
 }
 ```
+
+### Crucial: Zero-Email Friction & Turnstile Assistance
+
+1. **Zero Email Verification Required**:
+   - 100MilionSeek physically does NOT send any confirmation emails or OTP codes!
+   - Synthetic emails are auto-generated. You can also specify `"email": "your_email@outlook.com"` in `config.json`.
+2. **Cloudflare Turnstile Assistance**:
+   - Run in headed window mode (double-click `run.bat` and select 1);
+   - If Cloudflare prompts with "Verify you are human", click the checkbox in the window;
+   - Once cleared, the `#done` card displays the API key within 10 seconds, and the script saves it to `results/accounts.txt` and `results/keys.txt`.
 
 ### 3. Execution
 
