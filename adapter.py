@@ -94,9 +94,9 @@ class RefPoolManager:
                 cur_invited = nodes[used_code]["invited"]
                 if cur_invited >= 10:
                     nodes[used_code]["cap_reached"] = True
-                    print(f"[RefPool] 🎯 恭喜！母号 [{used_code}] 已成功吃满 10 个 AFF（额外 1 亿 tokens/天 永久封顶）！")
+                    print(f"[RefPool] [+] 恭喜！母号 [{used_code}] 已成功吃满 10 个 AFF（额外 1 亿 tokens/天 永久封顶）！")
                 else:
-                    print(f"[RefPool] 📈 母号 [{used_code}] 进度: {cur_invited}/10")
+                    print(f"[RefPool] [*] 母号 [{used_code}] 进度: {cur_invited}/10")
             else:
                 nodes[used_code] = {"invited": 1, "cap_reached": False}
 
@@ -108,7 +108,7 @@ class RefPoolManager:
                     "invited": 0,
                     "cap_reached": False
                 }
-                print(f"[RefPool] 🐣 新母号孵化入池: [{new_code}] ({new_email})")
+                print(f"[RefPool] [+] 新母号孵化入池: [{new_code}] ({new_email})")
 
             # 3. Rotate active_code if current parent is capped
             cur_active = data.get("active_code", used_code)
@@ -120,18 +120,18 @@ class RefPoolManager:
                         break
                 data["active_code"] = next_active or used_code
                 if next_active and next_active != cur_active:
-                    print(f"[RefPool] 🔄 自动接力切换：下一任挂载母号 ➔ [{next_active}]")
+                    print(f"[RefPool] [*] 自动接力切换：下一任挂载母号 -> [{next_active}]")
 
             self.save(data)
 
 
-def fetch_account_ref_code(api_key: str) -> Optional[str]:
+def fetch_account_ref_code(api_key: str, user_agent: Optional[str] = None) -> Optional[str]:
     """Query /api/login and /api/me using newly generated API key to retrieve its referral code."""
     try:
         s = requests.Session()
         headers = {
             "Content-Type": "application/json",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            "User-Agent": user_agent or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
         }
         res_login = s.post("https://100milionseek.top/api/login", json={"api_key": api_key}, headers=headers, timeout=8)
         if res_login.status_code == 200:
@@ -363,7 +363,8 @@ class MilionseekAdapter(BaseSiteAdapter):
                                 pass
 
                             # Retrieve new account's referral code and update cascade pool
-                            new_ref_code = fetch_account_ref_code(api_key)
+                            ua = self.page.evaluate("() => navigator.userAgent")
+                            new_ref_code = fetch_account_ref_code(api_key, user_agent=ua)
                             self.pool_mgr.record_invite(
                                 used_code=self.ref_code,
                                 new_code=new_ref_code,
